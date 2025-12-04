@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | LAXMI NARAYAN KIRANA STORE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .about-hero {
+            background: url('image/store.jpeg') center/cover no-repeat;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+        .about-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        .about-hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        .about-section h2 {
+            margin-bottom: 20px;
+        }
+        .about-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .values-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .values-list li::before {
+            content: "✔";
+            color: #ffc107;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- LOAD HEADER -->
+<div id="header"></div>
+<script>
+    fetch("header.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("header").innerHTML = data);
+</script>
+
+<!-- HERO SECTION -->
+<div class="about-hero mb-5">
+    <div class="about-hero-overlay"></div>
+    <div class="about-hero-content">
+        <h1 class="display-4 fw-bold">About LAXMI NARAYAN KIRANA STORE</h1>
+        <p>Your neighborhood grocery store delivering quality & trust</p>
+    </div>
+</div>
+
+<!-- ABOUT CONTENT -->
+<div class="container about-section mb-5">
+    <h2>Who We Are</h2>
+    <p>
+        LAXMI NARAYAN KIRANA STORE has been serving the local community with quality groceries and household essentials for years. We take pride in sourcing fresh produce daily and offering trusted products at fair prices. Our store is dedicated to providing a friendly shopping experience for everyone.
+    </p>
+
+    <h2>Our Mission</h2>
+    <p>
+        To provide every household with fresh, reliable, and affordable groceries, while maintaining trust, transparency, and excellent customer service.
+    </p>
+
+    <h2>Our Values</h2>
+    <ul class="values-list">
+        <li>Fresh & quality products</li>
+        <li>Affordable pricing</li>
+        <li>Friendly and reliable service</li>
+        <li>Community-oriented business</li>
+        <li>Home Delivery Service</li>
+    </ul>
+
+    <h2>Delivery Service</h2>
+    <p>
+        We offer convenient **home delivery** for all your grocery needs. Whether you need daily essentials or bulk orders, just give us a call or visit our website to place your order. Our delivery team ensures timely and safe delivery right to your doorstep.
+    </p>
+</div>
+
+<!-- LOAD FOOTER -->
+<div id="footer"></div>
+<script>
+    fetch("footer.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

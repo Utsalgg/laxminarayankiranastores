@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | LAXMI NARAYAN KIRANA STORE</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .product-card {
+            transition: 0.3s;
+            border: 1px solid #eee;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .category-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+        .category-buttons button {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 8px 16px;
+            background: #f8f9fa;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .category-buttons button.active, 
+        .category-buttons button:hover {
+            background: #ffc107;
+            border-color: #ffc107;
+            color: #fff;
+        }
+        .card img {
+            height: 180px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<!-- LOAD HEADER -->
+<div id="header"></div>
+<script>
+    fetch("header.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("header").innerHTML = data);
+</script>
+
+<!-- MAIN CONTENT -->
+<div class="container py-5">
+
+    <h2 class="fw-bold mb-2">Our Products</h2>
+    <p class="text-muted">Click a category to filter products:</p>
+
+    <!-- CATEGORY BUTTONS -->
+    <div class="category-buttons">
+        <button class="active" data-category="all">All</button>
+        <button data-category="grains">Grains & Rice</button>
+        <button data-category="oil">Oils</button>
+        <button data-category="spices">Spices</button>
+        <button data-category="snacks">Snacks</button>
+         <button data-category="Biscuits">Biscuits</button>
+          <button data-category="Vegetables">Vegetables</button>
+    </div>
+
+    <!-- PRODUCT GRID -->
+    <div class="row g-4" id="products-grid">
+
+        <!-- Product 1 -->
+        <div class="col-md-3 product-card-container" data-category="grains" data-name="premium grain">
+            <div class="card product-card">
+                <img src="image/rice2.jpeg">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Premium Rice</h5>
+                    <p class="text-muted">Rs. 620</p>
+                    <button class="btn btn-primary btn-sm">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+                <div class="col-md-3 product-card-container" data-category="Biscuits" data-name="premium Biscuits">
+            <div class="card product-card">
+                <img src="image/biscuit.jpg">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Premium biscuits</h5>
+                    <p class="text-muted">Rs. 20</p>
+                    <button class="btn btn-primary btn-sm">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+
+
+                <div class="col-md-3 product-card-container" data-category="cold drinks" data-name="premium drinks">
+            <div class="card product-card">
+                <img src="image/beer.jpg">
+                <div class="card-body text-center">
+                    <h5 class="card-title"> Hard Drinks</h5>
+                    <p class="text-muted">Rs. 250</p>
+                    <button class="btn btn-primary btn-sm">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-md-3 product-card-container" data-category="oil" data-name="mustard oil">
+            <div class="card product-card">
+                <img src="image/oil3.jpg">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Mustard Oil - 1L</h5>
+                    <p class="text-muted">Rs. 250</p>
+                    <button class="btn btn-primary btn-sm">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-md-3 product-card-container" data-category="spices" data-name="Masalas">
+            <div class="card product-card">
+                <img src="image/spices.jpg">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Masala Pack</h5>
+                    <p class="text-muted">Rs. 95</p>
+                    <button class="btn btn-primary btn-sm">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-md-3 product-card-container" data-category="snacks" data-name="potato chips">
+            <div class="card product-card">
+                <img src="image/chips.avif">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Potato Chips</h5>
+                    <p class="text-muted">Rs. 60</p>
+                    <button class="btn btn-primary btn-sm">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+ <div class="col-md-3 product-card-container" data-category="Vegetables" data-name="Freah vegetables">
+            <div class="card product-card">
+                <img src="image/vegetables.jpeg">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Vegetables</h5>
+                    <p class="text-muted">Rs. 60</p>
+                    <button class="btn btn-primary btn-sm">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 product-card-container" data-category="cold drinks" data-name="cold drinks">
+            <div class="card product-card">
+                <img src="image/drinks.jpg">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Cold drinks</h5>
+                    <p class="text-muted">Rs. 60</p>
+                    <button class="btn btn-primary btn-sm">Buy Now</button>
+                </div>
+            </div>
+        </div>
+         <div class="col-md-3 product-card-container" data-category="Dry Fruits" data-name="Dry Fruits">
+            <div class="card product-card">
+                <img src="image/dry fruits.webp">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Dry Fruits</h5>
+                    <p class="text-muted">Rs. 60</p>
+                    <button class="btn btn-primary btn-sm">Buy Now</button>
+                </div>
+            </div>
+        </div>
+</div>
+
+<!-- LOAD FOOTER -->
+<div id="footer"></div>
+<script>
+    fetch("footer.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+
+<!-- CATEGORY FILTER SCRIPT -->
+<script>
+    const categoryButtons = document.querySelectorAll(".category-buttons button");
+    const cards = document.querySelectorAll(".product-card-container");
+
+    categoryButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            // Remove active class from all buttons
+            categoryButtons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            const selectedCategory = btn.getAttribute("data-category");
+
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute("data-category");
+                if(selectedCategory === "all" || cardCategory === selectedCategory) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
